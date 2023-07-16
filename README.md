@@ -1,17 +1,19 @@
-# Documentacion del componente Card
-## Descripcion:
+# Documentación del componente Card
+## Descripción:
 Este componente es una tarjeta genérica compuesta con una imagen, un título, un texto y un botón.
 
-## Tecnologias usadas
-A continuación se enlistan las tecnologías y librerías utilizadas en el desarrollo de este componente:
+## Tecnologías usadas
+A continuación, se enlistan las tecnologías y librerías utilizadas en el desarrollo de este componente:
 * Vue 3
 * Preprocesador SCSS
 * Vue Test Utils
 * Vitest
+* Prettier
+* ESLint
 
-## Caracteristicas del componente
+## Características del componente
 ### Props
-El componente Card tiene cuatro propiedades:
+El componente *Card* tiene cuatro propiedades:
 * **image** (String) (Requerido): Enlace a la imagen que se mostrará en la parte superior de la tarjeta.
 * **title** (String) (Requerido): Título de la tarjeta que se muestra debajo de la imagen.
 * **text** (String) (Requerido): El texto de la tarjeta. Este texto se mostrará debajo del título.
@@ -24,15 +26,15 @@ El componente Card tiene cuatro propiedades:
 * **onClick()**: Método que se activa al hacer clic en el botón de la tarjeta. Este método emite el evento more.
  
 ### CSS
-* Los estilos están definidos en la seccion de <style> y usan la extencion .scss.
+* Los estilos están definidos en la sección de <style> y usan la extensión .scss.
 * Los estilos están "scoped", lo que significa que solo se aplicarán a este componente y no afectarán a otros componentes de la aplicación donde se reutilice.
-* Se pueden modificar las variables globales definidas al inicio de la seccion de *style*, las cuales cambian el color de la card y del boton, asi como el color de las letras.
+* Se pueden modificar las variables globales definidas al inicio de la sección de *style*, las cuales cambian el color de la card y del botón, asi como también el color de las letras.
 
 ## Uso del componente
 Para utilizar este componente, primero se debe descargar el archivo *TheCard.vue* que se encuentra dentro de *src/components* y agregarlo al proyecto donde se reutilizara. 
-Posteriormeente se debe importar y usarlo en la plantilla padre mediante la etiqueta *TheCard*. Asegúrese de pasar las propiedades *image*, *title*, *text* y *maxLines*, asi como tambien el evento *more* emitido por el componente card cuando se hace click en el boton *Saber más*.
+Posteriormente se debe importar y usarlo en la plantilla padre mediante la etiqueta *TheCard*. Asegúrese de pasar las propiedades *image*, *title*, *text* y *maxLines*, así como también el evento *more* emitido por el componente card cuando se hace click en el botón *Saber más*.
 
-A continuacion un ejemplo:
+A continuación un ejemplo:
 
 ```vue
 <template>
@@ -74,7 +76,7 @@ export default {
 
 ```
 
-## Demostracion
+## Demostración
 El ejemplo anterior se encuentra en el archivo *App.vue*, y utiliza imágenes generadas automáticamente por el servicio [LoremFlickr](https://loremflickr.com/) para propósitos de demostración. 
 En el método *handleMore* se puede agregar lo que quiere que suceda cuando se emita el evento *more*, en nuestro ejemplo, simplemente hemos decidido imprimir 'Saber más' en la consola como una acción demostrativa. 
 
@@ -92,7 +94,7 @@ La implementación de este componente se puede ver de la siguiente forma:
 ## Pruebas
 Las pruebas se han implementado utilizando la biblioteca vitest para correr las pruebas y @vue/test-utils para montar el componente. 
 
-A continuacion se muestran las pruebas implementadas:
+A continuación se muestran las pruebas implementadas:
 * **renders the props correctly**: Esta prueba verifica si las propiedades se están renderizando correctamente en el componente. Se monta el componente con un conjunto de propiedades y luego se verifica si el título, el texto y la imagen se están renderizando con los valores esperados.
 * **applies maxLines to style correctly**: Esta prueba verifica si la propiedad maxLines se aplica correctamente como un estilo en el componente. Se monta el componente con maxLines configurado en 5, y luego se verifica si el estilo del texto incluye 'webkit-line-clamp: 5'.
 * **emits "more" event on click**: Esta prueba verifica si el componente emite el evento more cuando se hace clic en el botón. Se monta el componente, se dispara un evento de clic en el botón y luego se verifica si el componente ha emitido el evento more.

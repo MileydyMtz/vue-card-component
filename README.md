@@ -34,7 +34,7 @@ El componente *Card* tiene cuatro propiedades:
 Para utilizar este componente, primero se debe descargar el archivo *TheCard.vue* que se encuentra dentro de *src/components* y agregarlo al proyecto donde se reutilizara. 
 Posteriormente se debe importar y usarlo en la plantilla padre mediante la etiqueta *TheCard*. Asegúrese de pasar las propiedades *image*, *title*, *text* y *maxLines*, así como también el evento *more* emitido por el componente card cuando se hace click en el botón *Saber más*.
 
-A continuación un ejemplo:
+A continuación, un ejemplo:
 
 ```vue
 <template>

@@ -94,7 +94,7 @@ La implementación de este componente se puede ver de la siguiente forma:
 ## Pruebas
 Las pruebas se han implementado utilizando la biblioteca vitest para correr las pruebas y @vue/test-utils para montar el componente. 
 
-A continuación se muestran las pruebas implementadas:
+A continuación, se muestran las pruebas implementadas:
 * **renders the props correctly**: Esta prueba verifica si las propiedades se están renderizando correctamente en el componente. Se monta el componente con un conjunto de propiedades y luego se verifica si el título, el texto y la imagen se están renderizando con los valores esperados.
 * **applies maxLines to style correctly**: Esta prueba verifica si la propiedad maxLines se aplica correctamente como un estilo en el componente. Se monta el componente con maxLines configurado en 5, y luego se verifica si el estilo del texto incluye 'webkit-line-clamp: 5'.
 * **emits "more" event on click**: Esta prueba verifica si el componente emite el evento more cuando se hace clic en el botón. Se monta el componente, se dispara un evento de clic en el botón y luego se verifica si el componente ha emitido el evento more.

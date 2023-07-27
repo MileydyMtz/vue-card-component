@@ -78,7 +78,7 @@ export default {
 
 ## Demostración
 El ejemplo anterior se encuentra en el archivo *App.vue*, y utiliza imágenes generadas automáticamente por el servicio [LoremFlickr](https://loremflickr.com/) para propósitos de demostración. 
-En el método *handleMore* se puede agregar lo que quiere que suceda cuando se emita el evento *more*, en nuestro ejemplo, simplemente hemos decidido imprimir 'Saber más' en la consola como una acción demostrativa. 
+En el método *handleMore* se puede agregar lo que quiere que suceda cuando se emita el evento *more*, en este ejemplo, simplemente se ha decidido imprimir 'Saber más' en la consola como una acción demostrativa. 
 
 La implementación de este componente se puede ver de la siguiente forma:
 

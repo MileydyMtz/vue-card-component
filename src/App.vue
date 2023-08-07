@@ -1,6 +1,6 @@
 <template>
 <main>
-    <TheCard 
+    <Card 
         :image="cardData.image" 
         :title="cardData.title" 
         :text="cardData.text" 
@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import TheCard from './components/TheCard.vue';
+import Card from './components/TheCard.vue';
 
 export default {
     components: {
-        TheCard
+        Card
     },
     data() {
         return {

@@ -23,23 +23,23 @@ El componente *Card* tiene cuatro propiedades:
 * **more**: Evento que se emite cuando se hace clic en el botón de la tarjeta.
 
 ### Método
-* **onClick()**: Método que se activa al hacer clic en el botón de la tarjeta. Este método emite el evento more.
+* **onClick()**: Método que se activa al hacer clic en el botón de la tarjeta. Este método emite el evento *more*.
  
-### CSS
+### Estilos
 * Los estilos están definidos en la sección de <style> y usan la extensión .scss.
 * Los estilos están "scoped", lo que significa que solo se aplicarán a este componente y no afectarán a otros componentes de la aplicación donde se reutilice.
 * Se pueden modificar las variables globales definidas al inicio de la sección de *style*, las cuales cambian el color de la card y del botón, asi como también el color de las letras.
 
 ## Uso del componente
 Para utilizar este componente, primero se debe descargar el archivo *TheCard.vue* que se encuentra dentro de *src/components* y agregarlo al proyecto donde se reutilizara. 
-Posteriormente se debe importar y usarlo en la plantilla padre mediante la etiqueta *TheCard*. Asegúrese de pasar las propiedades *image*, *title*, *text* y *maxLines*, así como también el evento *more* emitido por el componente card cuando se hace click en el botón *Saber más*.
+Posteriormente se debe importar y usarlo en la plantilla padre mediante la etiqueta *Card*. Asegúrese de pasar las propiedades *image*, *title*, *text* y *maxLines*, así como también el evento *more* emitido por el componente card cuando se hace click en el botón *Saber más*.
 
 A continuación, un ejemplo:
 
 ```vue
 <template>
 <main>
-    <TheCard 
+    <Card 
         :image="cardData.image" 
         :title="cardData.title" 
         :text="cardData.text" 
@@ -50,11 +50,11 @@ A continuación, un ejemplo:
 </template>
 
 <script>
-import TheCard from './components/TheCard.vue';
+import Card from './components/TheCard.vue';
 
 export default {
     components: {
-        TheCard
+        Card
     },
     data() {
         return {
@@ -92,7 +92,7 @@ La implementación de este componente se puede ver de la siguiente forma:
 
 
 ## Pruebas
-Las pruebas se han implementado utilizando la biblioteca vitest para correr las pruebas y @vue/test-utils para montar el componente. 
+Se utiliza la biblioteca vitest para correr las pruebas y @vue/test-utils para montar el componente. 
 
 A continuación, se muestran las pruebas implementadas:
 * **renders the props correctly**: Esta prueba verifica si las propiedades se están renderizando correctamente en el componente. Se monta el componente con un conjunto de propiedades y luego se verifica si el título, el texto y la imagen se están renderizando con los valores esperados.
